@@ -1,9 +1,16 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-    <a class="navbar-brand font-weight-bold" href="index.php">
-        <img class="mr-2" src="./static/img/logo.png" height="25px"/>
-        ContactsApp
-    </a>
+    <?php if (isset($_SESSION["user"])): ?>
+        <a class="navbar-brand font-weight-bold" href="home.php">
+            <img class="mr-2" src="./static/img/logo.png" height="25px"/>
+            ContactsApp
+        </a>
+    <?php else: ?>
+        <a class="navbar-brand font-weight-bold" href="index.php">
+            <img class="mr-2" src="./static/img/logo.png" height="25px"/>
+            ContactsApp
+        </a>
+    <?php endif ?>
     <button
         class="navbar-toggler"
         type="button"
